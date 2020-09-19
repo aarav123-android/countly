@@ -70,69 +70,67 @@ class _CountlyMainState extends State<CountlyMain> {
         ),
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Center(
                 child: Column(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: MediaQuery.of(context).size.height / 2 - 250,
-                      ),
-                      child: Column(
-                        children: [
-                          NeumorphicText(
-                            '$countNum',
-                            style: NeumorphicStyle(color: Colors.black),
-                            textStyle: NeumorphicTextStyle(
-                              fontSize: 60.0,
-                              fontFamily: 'SFPRO',
-                            ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '$countNum',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 60.0,
+                            fontFamily: 'SFPRO',
                           ),
-                          SizedBox(
-                            height: 50,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(left: 50),
-                            child: Row(
-                              children: [
-                                NeumorphicButton(
-                                  style: NeumorphicStyle(
-                                    shape: NeumorphicShape.concave,
-                                    boxShape: NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(100)),
-                                    depth: 8,
-                                    lightSource: LightSource.topLeft,
-                                  ),
-                                  child: Icon(Icons.remove),
-                                  onPressed: () {
-                                    setState(() {
-                                      countNum = countNum - 1;
-                                    });
-                                  },
-                                ),
-                                SizedBox(
-                                  width: 175,
-                                ),
-                                NeumorphicButton(
-                                  style: NeumorphicStyle(
-                                    shape: NeumorphicShape.concave,
-                                    boxShape: NeumorphicBoxShape.roundRect(
-                                        BorderRadius.circular(100)),
-                                    depth: 8,
-                                    lightSource: LightSource.topLeft,
-                                  ),
-                                  child: Icon(Icons.add),
-                                  onPressed: () {
-                                    setState(() {
-                                      countNum = countNum + 1;
-                                    });
-                                  },
-                                ),
-                              ],
+                        ),
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            NeumorphicButton(
+                              style: NeumorphicStyle(
+                                shape: NeumorphicShape.concave,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(100)),
+                                depth: 8,
+                                lightSource: LightSource.topLeft,
+                              ),
+                              child: Icon(Icons.remove),
+                              onPressed: () {
+                                setState(() {
+                                  countNum = countNum - 1;
+                                });
+                              },
                             ),
-                          )
-                        ],
-                      ),
+                            SizedBox(
+                              width: 175,
+                            ),
+                            NeumorphicButton(
+                              style: NeumorphicStyle(
+                                shape: NeumorphicShape.concave,
+                                boxShape: NeumorphicBoxShape.roundRect(
+                                    BorderRadius.circular(100)),
+                                depth: 8,
+                                lightSource: LightSource.topLeft,
+                              ),
+                              child: Icon(Icons.add),
+                              onPressed: () {
+                                setState(() {
+                                  countNum = countNum + 1;
+                                });
+                              },
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ],
                 ),
